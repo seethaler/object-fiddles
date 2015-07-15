@@ -5,7 +5,11 @@
 
   //Code here
 
-
+  var me = {
+    name: 'jake',
+    age: '35',
+  }
+    console.log(me.name);
 
 
 //NEXT PROBLEM
@@ -15,24 +19,30 @@
 
 //Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. Have the values to those keys be your favorite thing in that category.
 
-  //Code here
-
+var favoriteThings = {
+  band: "Foo Fighters",
+  food: "Tacos",
+  person: "Manon",
+  book: "The Alchemist",
+  movie: "Lars",
+  holiday: "Christmas",
+}
 
 //After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
 
-  //Code here
+  favoriteThings.car = "Volkswagen Bus";
+  favoriteThings.brand = "Sennheiser";
 
 
 //Now change the food key in your favoriteThings object to be 'Lettuce' and change the book key in your favoriteThings object to be '50 Shades of Gray'.
 
-  //Code here
+  favoriteThings.food = "Lettuce";
+  favoriteThings.book = "50 Shades of Gray";
 
-
+  console.log(favoriteThings.book);
 
 
 //NEXT PROBLEM
-
-
 
 /*Create an empty Object called backPack. Now, create a variable called 'item'
 and set it equal to the string 'firstPocket'. Using bracket notation,
@@ -42,11 +52,18 @@ Set the value of that key to 'chapstick'.
 Using dot notation, add another key (or property) to your backPack object
 that is named color, with the value being the color of your backpack. */
 
-  //Code here
+var backPack = {
+  item: 'firstPocket',
+}
+
+backPack['item'] = 'chapstick';
+
+console.log(backPack.item);
+
 
 //After you do the above, alert your entire backPack object.
 
-  //Code here
+alert(backPack);
 
 /*You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
@@ -64,13 +81,22 @@ Instead, console.log your whole backPack object and then check out the console. 
 
 //Create another 'me' object with the following properties name, age, height, gender, married, eyeColor, hairColor. Fill those properties in with the appropriate values.
 
-  //Code Here
+  var me = {
+    name: 'Jacob',
+    age: '35',
+    height: "6'7",
+    gender: "Male",
+    married: "Yes",
+    eyeColor: "Blue",
+    hairColor: "Bald"
+  }
+  //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
-//Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
-
-  //Code Here
-
-
+for (var variable in me) {
+  if (me.hasOwnProperty(variable)) {
+    alert(me[variable]);
+  }
+}
 
 
 //NEXT PROBLEM
@@ -80,8 +106,18 @@ Instead, console.log your whole backPack object and then check out the console. 
 
 //Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
 
-  //Code Here
-
+var album = {
+  hottie: '1.32',
+  age: '4.10',
+  height: '3.40',
+  gender: '2.10',
+  married: '3.33'
+}
+for (var variable in album) {
+if (album.hasOwnProperty(variable)) {
+  alert(variable);
+}
+}
 //Now, loop through your album object alerting every song title individually.
 
   //Code Here
@@ -96,9 +132,22 @@ Instead, console.log your whole backPack object and then check out the console. 
 
 //Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
 
-  //Code Here
+  var states = {
+    utah: 50,
+    newyork: 100,
+    california: 75,
+    nevada: 65,
+    washington: 23
+  }
+  //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
-//Now, loop through your states object and if the states population is greater than 30K, alert that state.
+  for (var variable in states) {
+    if (states.hasOwnProperty(variable)) {
+      if (states[variable] > 70) {
+        alert(variable);
+      }
+    }
+  }
 
   //Code Here
 
@@ -196,9 +245,9 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called MakeCard which takes in all the data it needs to make a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
 
   //Code Here
-  
-  
-  
+
+
+
 //NEXT PROBLEM
 
 
@@ -209,5 +258,3 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 */
 
   //Code Here
-
-
